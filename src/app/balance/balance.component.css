@@ -1,0 +1,13 @@
+div{
+    background-color: #00004d;
+    color: #b3e6dc;
+    margin-top: 0px;
+    /* padding: 50px; */
+}
+p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    padding: 10px;
+    color: #b3e6dc;
+}

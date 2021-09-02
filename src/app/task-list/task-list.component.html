@@ -1,0 +1,44 @@
+<div style="margin: auto; width: 50%; align-items: center">
+  <!-- <button (click)="getList()">Click me</button> -->
+  <!-- <div *ngIf="income_list.length>0">
+    <li *ngFor="let l of income_list">
+      <ul>{{ l.description }}</ul>
+    </li>
+  </div> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6"><h2 style="color: #009973">Income</h2></div>
+      <div class="col-6"><h2 style="color: #ff6666">Expense</h2></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div *ngIf="income_list.length>0">
+          <div *ngFor="let income of income_list">
+          <div class="alert alert-success" role="alert">
+            <table style="width: 100%;">
+              <tr><td>{{ income.description | titlecase }}</td>
+                  <td class="right">{{ income.amount }}</td></tr>
+            </table>
+            <!-- {{income.description}}   {{income.amount}} -->
+          </div>
+        </div>
+        </div>        
+        
+      </div>
+      <div class="col-6">
+        <div *ngIf="expense_list.length>0">
+          <div *ngFor="let expense of expense_list">
+          <div class="alert alert-danger" role="alert" style="align-items: center;">
+            <table style="width: 100%;">
+              <tr><td>{{ expense.description | titlecase}}</td>
+                  <td class="right">{{ expense.amount }}</td></tr>
+            </table>
+            <!-- {{expense.description}} {{expense.amount}} -->
+            <!-- <span class="left">{{expense.description}}</span> <span class="right">{{expense.amount}}</span>    -->
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
