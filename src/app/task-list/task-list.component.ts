@@ -17,15 +17,8 @@ export class TaskListComponent implements OnChanges {
   tasks_list : any;
   
   constructor(public taskService:TaskOperationService) {
-  }
-
+  }  
   
-  foo(l : Task[]):void{
-    console.log("Inside foo")
-    for(let i = 0;i<l.length;i+=1){
-      console.log(l[i]);
-    }
-  }
   ngOnChanges() : void{
     this.tasks_list = this.taskService.getTasks();
     // console.log(this.tasks_list[0].taskType);
@@ -35,7 +28,6 @@ export class TaskListComponent implements OnChanges {
     // console.log(typeof this.income_list[0]);
     // console.log(this.expense_list);
     
-    this.foo(this.income_list);
   }
 
   

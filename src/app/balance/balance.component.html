@@ -1,3 +1,5 @@
 <div>
-    <p> 0 </p>
+  <p [class]="color_apply">{{ amount }}</p>
+  <!-- <p [class.positive]="amount>=0" [class.negative]="amount \<0"> {{ amount }}</p> -->
 </div>
+<app-task (sendBalanceAmount)="getBalanceAmount($event)"></app-task>

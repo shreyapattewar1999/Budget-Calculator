@@ -10,6 +10,7 @@ export class TaskOperationService {
 
   constructor() { }
 
+  balance : number = 0;
   putTask(task: Task):Observable<any>{
     // console.log(task);
     TASKS.push({
@@ -24,5 +25,19 @@ export class TaskOperationService {
 
   getTasks():Array<Task>{
     return TASKS;
+  }
+
+  getBalanceAmount(): number{
+    this.balance = TASKS.reduce((acc, curr) => {
+      if (curr.taskType === "Income"){
+        acc = acc + Number(curr.amount);
+      }
+      else if(curr.taskType === "Expense"){
+        acc = acc - Number(curr.amount)
+      }
+      return acc;
+    },0);
+    
+    return this.balance;
   }
 }

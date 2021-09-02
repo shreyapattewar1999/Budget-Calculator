@@ -1,9 +1,12 @@
 .right{
     float:right;
-    margin: auto;
 }
 
 .left{
     float:left;
     margin: auto;
+}
+
+td{
+    vertical-align: middle;
 }
