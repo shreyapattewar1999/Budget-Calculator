@@ -6,12 +6,13 @@
     </li>
   </div> -->
   <div class="container">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-6"><h2 style="color: #009973">Income</h2></div>
       <div class="col-6"><h2 style="color: #ff6666">Expense</h2></div>
-    </div>
+    </div> -->
     <div class="row">
-      <div class="col-6">
+      <div class="col">
+        <h2 style="color: #009973">Income</h2>
         <div *ngIf="income_list.length>0">
           <div *ngFor="let income of income_list">
           <div class="alert alert-success" role="alert">
@@ -28,7 +29,8 @@
         </div>        
         
       </div>
-      <div class="col-6">
+      <div class="col">
+        <h2 style="color: #ff6666">Expense</h2>
         <div *ngIf="expense_list.length>0">
           <div *ngFor="let expense of expense_list">
           <div class="alert alert-danger" role="alert" style="align-items: center;">
